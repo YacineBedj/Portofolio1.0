@@ -1,0 +1,74 @@
+.contact{
+    overflow: hidden;
+    position: relative;
+}
+.contact--container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 10px;
+    color: var(--text-color);
+}
+.contact--container h1{
+    margin-bottom: 40px;
+}
+.contact--container p{
+    font-size: 14px;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.contact--container .info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 300px;
+    border: 1px solid var(--main-color);
+    border-width: 1px 1px 1px 0px;
+    border-radius: 25px;
+}
+.contact--container .info-meida{
+    justify-content: space-between;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+.contact--container .contact--icon--span{
+    height: 43px;
+    width: 43px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 25px;
+    border: 2px solid var(--text-color);
+    margin-right: 6px;
+    transition: all .5s;
+}
+.contact--icon--span:hover{
+    border: 2px solid var(--main-color);
+    
+}
+.contact--icon{
+    font-size: 20px;
+    color: var(--text-color);
+    transition: all .5s;
+}
+.info .contact--icon--span:hover .contact--icon{
+    color: var(--main-color);
+}
+.info-meida .contact--icon--span:hover .contact--icon{
+    color: var(--main-color);
+}
+/* start message  */
+.msg{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    background-color: aliceblue;
+    transform: translateY(-110%);
+    transition: all 2s;
+}

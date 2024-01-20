@@ -1,0 +1,72 @@
+.app{
+  min-height: 100vh;
+  min-width: 100vw;
+  position: relative;
+}
+/* start about  */
+.container{
+  max-width: 1200px;
+  margin: 20px auto ;
+  padding: 15px;
+  border-radius: 25px;
+  min-height: 98vh;
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.021);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+  position: relative;
+}
+/* button  */
+.btn{
+  background-color: var(--main-color);
+  padding: 10px 20px;
+  color: var(--text-color);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
+.btn::before{
+  content: "";
+  height: 98%;
+  width: 98%;
+  position: absolute;
+  background-color: transparent;
+  top: 6px;
+  left: 6px;
+  border: 2px solid var(--text-color);
+  transition: all 0.5s;
+}
+.btn:hover::before{
+  top: 0px;
+  left: 0px;
+}
+.btn--icon{
+  margin-left: 20px;
+}
+.link{
+  color: var(--main-color);
+  text-decoration: none;
+  text-transform: capitalize;
+  position: relative;
+}
+.link::before{
+  content: "";
+  width: 0%;
+  position: absolute;
+  height: 2px;
+  top: 100%;
+  left: 0px;
+  background-color: var(--main-color);
+  transition: all .5s;
+}
+.link:hover::before{
+  width: 100%;
+}
+.link-simple{
+  text-decoration: none;
+}

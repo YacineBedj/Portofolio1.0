@@ -1,0 +1,66 @@
+.setting{
+    height: 400px;
+    width: 240px;
+    background: var(--background-2); 
+    color: var(--main-color);
+    position: absolute;
+    top: 200px;
+    right: 0px;
+    padding: 0px;
+    margin: 0px;
+    transition: right 0.5s ease-in-out;
+    position: fixed; 
+    z-index: 100; 
+  }
+  .setting--option{
+    position: relative;
+    padding: 20px;
+  }
+  .setting--icon{
+    position: absolute;
+    top: 0px;
+    right:  100%;
+    height: 50px;
+    width: 50px;
+    border: 0;
+    background-color: var(--background-2);
+    border-radius: 20px 0px 0px 20px;
+    cursor: pointer;
+  }
+  .IoIosSettings{
+    color: var(--main-color);
+    font-size: 35px;
+    animation: retate 3s linear infinite ;
+  }
+  @keyframes retate{
+    0%{
+      transform:  rotate(0deg);
+    }
+    100%{
+      transform:  rotate(360deg);
+    }
+  }
+  .setting--option > div:not(:last-child){
+    padding-bottom: 20px;
+    border-bottom: 0.5px solid var(--text-color);
+  }
+  .setting--option--title{
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--main-color);
+    margin: 10px 0px 20px;
+  }
+  .setting--option--colors{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .setting--option--colors span{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+  }
+  .glass, .light{
+    display: flex;
+    justify-content: space-between;
+  }

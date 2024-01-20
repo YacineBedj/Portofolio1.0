@@ -1,0 +1,45 @@
+.black-bg { 
+  /* background: ; */
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -1000;
+  top: 0px;
+  left: 0px;
+  display: grid;
+  grid-template-columns:repeat(20, auto);
+  padding: 0px;
+  background: var(--background);
+}
+@media(min-width:978px){
+  .black-bg{
+    padding: 0px 120px;
+  }
+}
+.black-bg span{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgb(201, 201, 201);
+  box-shadow: 0px 0px 10px rgb(192, 192, 192), 0px 0px 50px rgb(202, 202, 202);
+  animation: to-up 3s linear infinite ;
+}
+.black-bg span:nth-child(odd){
+  animation: to-down 3s linear infinite ;
+}
+@keyframes to-up{
+  0%{
+    margin-top: 100vh;
+  }
+  100%{
+    margin-top: 0%;
+  }
+}
+@keyframes to-down{
+  0%{
+    margin-top: 0%;
+  }
+  100%{
+    margin-top: 100vh;
+  }
+}

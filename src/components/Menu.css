@@ -1,0 +1,64 @@
+.menu{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+}
+
+.menu--icon{
+    position: fixed;
+    width: 30px;
+    right: 30px;
+    top: 30px;
+    z-index: 2;
+    cursor: pointer;
+    overflow: hidden;
+}
+.menu--icon span{
+    display: block;
+    background-color: var(--text-color-2);
+    width: 30px;
+    height: 2px;
+    margin-bottom: 8px;
+    transition: all 0.5s;
+}
+.menu--icon span:first-child{
+    margin-left: -10px;
+}
+.menu--icon span:last-child{
+    margin-left: 10px;
+}
+
+.menu--icon:hover span:first-child{
+    margin-left: 0px;
+}
+.menu--icon:hover span:last-child{
+    margin-left: 0px;
+}
+
+/* menu links  */
+.menu--list{
+    position: absolute;
+    background-color: var(--background);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: all 20;
+    border-radius: 25px;
+}
+
+.menu--list li{
+    color: var(--text-color-2);
+    width: 200px;
+    padding: 10px;
+    font-size: x-large;
+    text-transform: capitalize;
+    border: 1px solid black;
+}
+.menu--list .link-simple{
+    color: var(--text-color-2);
+}
