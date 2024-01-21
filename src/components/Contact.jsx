@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./Contact.css"
-import Menu from './Menu'
+import { IoChevronBackOutline } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
@@ -9,16 +9,32 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 
 
-function Msg({show}){
+function Msg({show, setShowMsg}){
     return(
-        <div className='msg' style={{transform : show ? "translateY(0%)" : "translateY(-110%)"}}>msg</div>
+        <div className='msg' style={{transform : show ? "translateY(0%)" : "translateY(-110%)"}}>
+            <form className="msg--container container">
+                <div className="exit--btn"
+                    onClick={()=>{setShowMsg((oldShow)=>{
+                        console.log(oldShow);
+                        return !oldShow
+                    })}}
+                ><IoChevronBackOutline className="exit--icon"/></div>
+                <input type="text" className='input' placeholder='Name'/>
+                <input type="text" className='input' placeholder='Email'/>
+                <input type="email" className='input'placeholder='Subject'/>
+                <textarea name="" id="" cols="30" rows="10"  className='input input--message' placeholder='Message'> </textarea>
+                <button className='btn'>
+                    <span>Send</span>
+                </button>
+            </form>
+        </div>
     )
 }
 function Contact() {
   let [showMsg, setShowMsg] = useState(true)
   return (
     <div className="contact">
-        <Msg show={showMsg}/>
+        <Msg show={showMsg} setShowMsg={setShowMsg}/>
        <div className="container contact--container">
         {/* <Menu/> */}
         <h1>Contact me</h1>
