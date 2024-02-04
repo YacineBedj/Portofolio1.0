@@ -7,6 +7,8 @@ import Background from "./components/Background"
 import About from "./components/About"  
 import Skills from './components/Skills';
 import Contact from './components/Contact'
+import Profile from './components/profile'
+import Project from './components/Project'
 
 
 export const Theme = createContext();
@@ -31,9 +33,9 @@ function App() {
         <main className='main-app'>
           <Routes>
               <Route path="/" element={<About/>}/>
-              <Route path="/portfolio">
-                <Route path=''element={<h1>portofolio</h1>}/>
-                <Route path=":id" element={<h1>id portofolio</h1>}/>
+              <Route path="/portofolio">
+                <Route path=''element={<Profile/>}/>
+                <Route path=":projectId" element={<Project/>}/>
               </Route>
               <Route path="/skills" element={<Skills/>}/>
               <Route path="/education" element={<h1>education</h1>}/>

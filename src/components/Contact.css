@@ -110,33 +110,4 @@
     background-color: var(--background-2);
 }
 
-.exit--btn{
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    background-color: var(--background-2);
-    margin-bottom: 30px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 1s;
-    cursor: pointer;
-    
-}
-.exit--icon{
-    color: var(--text-color-2);
-    font-size: 24px;
-    animation: to-left 1s infinite;
-}
-.exit--icon:hover{
-    color: var(--main-color);
-}
-@keyframes to-left{
-    0%{
-        transform: translateX(0px);
-    }
-    100%{
-        transform: translateX(-5px);
-    }
-}
+

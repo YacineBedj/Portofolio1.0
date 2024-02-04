@@ -1,0 +1,23 @@
+.profile--container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-color);
+}
+.profile--container h1{
+    text-transform: capitalize;
+    margin: 40px 0px;
+}
+.profile--filtter{
+    margin:0px 0px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile--projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    row-gap: 40px;
+    column-gap: 20px;
+    width: 100%;
+}

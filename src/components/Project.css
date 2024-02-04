@@ -1,0 +1,34 @@
+.project{
+    background-color: var(--background);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 250px;
+}
+@media(max-width:960px){
+    .project{
+        padding: 100px 20px;
+    }
+}
+.project *{
+    margin-bottom: 20px;
+}
+.project img{
+    width: 100%;
+    margin-bottom: 70px;
+    box-shadow: 5px 5px 20px ;
+    transition: all 0.5s;
+}
+.project img:hover{
+    box-shadow: 5px 5px 100px ;
+
+}
+.project h1{
+    text-transform: capitalize;
+}
+.project .title{
+    color: var(--text-color-2);
+    font-weight: 700;
+    margin-right: 6px;
+}

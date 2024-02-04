@@ -1,13 +1,12 @@
 .menu{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-
+    z-index: 98;
+    background-color: gainsboro;
 }
 
 .menu--icon{
     position: fixed;
     width: 30px;
+    height: 30px;
     right: 30px;
     top: 30px;
     z-index: 2;
@@ -23,10 +22,10 @@
     transition: all 0.5s;
 }
 .menu--icon span:first-child{
-    margin-left: -10px;
+    margin-left: -12px;
 }
 .menu--icon span:last-child{
-    margin-left: 10px;
+    margin-left: 12px;
 }
 
 .menu--icon:hover span:first-child{
@@ -38,26 +37,46 @@
 
 /* menu links  */
 .menu--list{
-    position: absolute;
-    background-color: var(--background);
-    height: 100%;
-    width: 100%;
+    position: fixed;
+    height: 100vh;
+    transform: translateY(100px);
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 1;
-    transition: all 20;
-    border-radius: 25px;
+    transition: all .7s;
+    background-color: var(--background);
 }
 
 .menu--list li{
     color: var(--text-color-2);
+    background-color: var(--background-2);
     width: 200px;
     padding: 10px;
-    font-size: x-large;
+    font-size: xx-large;
     text-transform: capitalize;
-    border: 1px solid black;
+    border-radius: 6px;
+    transform: translateY(-100px);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.445);
+}
+.menu--list li::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    right: -100%;
+    background-color: var(--main-color);
+    z-index: -1;
+    transition: all 0.5s;
+}
+.menu--list li:hover::before{
+    right: 0px;
 }
 .menu--list .link-simple{
     color: var(--text-color-2);
